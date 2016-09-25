@@ -12,6 +12,9 @@ namespace kalk
 {
     public partial class Form1 : Form
     {
+        double liczba1 = 0;
+        double liczba2 = 0;
+        double wynik = 0;
         double variable;
         char sign;
 
@@ -77,7 +80,7 @@ namespace kalk
 
         private void button18_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            textBox1.Text = "0";
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -111,38 +114,68 @@ namespace kalk
 
         private void button2_Click(object sender, EventArgs e)
         {
-            variable = double.Parse(textBox1.Text);
+            try
+            {
+                variable = double.Parse(textBox1.Text);
 
-            sign = '+';
+                sign = '+';
 
-            textBox1.Text = "";
+                textBox1.Text = "0";
+            }
+            catch
+            {
+
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            variable = double.Parse(textBox1.Text);
+            try
+            {
 
-            sign = '-';
+                variable = double.Parse(textBox1.Text);
 
-            textBox1.Text = "";
+                sign = '-';
+
+                textBox1.Text = "";
+            }
+            catch
+            {
+
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            variable = double.Parse(textBox1.Text);
+            try
+            {
 
-            sign = '*';
 
-            textBox1.Text = "";
+                variable = double.Parse(textBox1.Text);
+
+                sign = '*';
+
+                textBox1.Text = "";
+            }
+            catch
+            {
+
+            }
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            variable = double.Parse(textBox1.Text);
+            try
+            {
+                variable = double.Parse(textBox1.Text);
 
-            sign = '/';
+                sign = '/';
 
-            textBox1.Text = "";
+                textBox1.Text = "";
+            }
+            catch
+            {
+            }
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -187,6 +220,11 @@ namespace kalk
                     break;
 
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
